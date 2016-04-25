@@ -121,7 +121,7 @@ class MockeryWpBridge implements WpBridgeInterface
      *
      * @return self
      */
-    public function addFilter($filterName, $filterCall, $prio, $numVars)
+    public function addFilter($filterName, $filterCall, $prio = 10, $numVars = 1)
     {
         $this->filters[] = $this->add($filterName, $filterCall, $prio, $numVars);
 
@@ -148,7 +148,7 @@ class MockeryWpBridge implements WpBridgeInterface
      *
      * @return self
      */
-    public function addAction($filterName, $filterCall, $prio, $numVars)
+    public function addAction($filterName, $filterCall, $prio = 10, $numVars = 1)
     {
         $this->actions[] = $this->add($filterName, $filterCall, $prio, $numVars);
 
